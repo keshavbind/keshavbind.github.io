@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaleMint - A digital publishing Android application for discovering and publishing short stories, poetry and lyrics.">
+  <title>TaleMint | Keshav Bind</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .project-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+
+    .project-gallery img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      padding: 8px;
+      cursor: zoom-in;
+      transition: transform 0.25s ease;
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.04);
+    }
+
+    .project-gallery figcaption {
+      padding: 0.8rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .project-video {
+      margin-top: 2rem;
+    }
+
+    .project-video video {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      max-height: 650px;
+      margin: 1.5rem auto 0;
+      border-radius: 12px;
+      background: #000;
+    }
+
+    /* Screenshot lightbox */
+    .image-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px 20px;
+    }
+
+    .image-lightbox.active {
+      display: flex;
+    }
+
+    .image-lightbox img {
+      max-width: 95%;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .image-lightbox .close-lightbox {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    @media (max-width: 480px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .project-gallery img {
+        height: 250px;
+      }
+
+      .image-lightbox {
+        padding: 50px 10px 10px;
+      }
+
+      .image-lightbox img {
+        max-width: 100%;
+        max-height: 85vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="logo">Keshav<span>.</span></a>
+
+      <a href="../index.html#projects" class="btn ghost sm">
+        <i data-lucide="arrow-left"></i>
+        Back to Projects
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section container">
+
+      <div class="section-head">
+        <span class="eyebrow">Android Application Development</span>
+        <h1>TaleMint</h1>
+        <p>
+          A digital publishing platform that allows users to
+          discover and publish short stories, poetry and lyrics
+          through an Android application.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="card">
+          <h2>Project Overview</h2>
+          <p>
+            TaleMint is an Android application designed to provide
+            a platform for discovering and publishing creative
+            written content. Users can explore different categories
+            of content and create their own publications.
+            The application uses Firebase for backend services
+            and follows MVVM architecture to organize its components.
+          </p>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li>User authentication and profile management.</li>
+            <li>Explore published creative content.</li>
+            <li>Discover stories, poetry and lyrics.</li>
+            <li>Browse content through categories.</li>
+            <li>Create and publish written content.</li>
+            <li>Store user and publication data using Firebase Firestore.</li>
+            <li>Organize application code using MVVM architecture.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Technologies Used</h2>
+          <ul>
+            <li>Kotlin</li>
+            <li>Android Studio</li>
+            <li>Firebase Authentication</li>
+            <li>Cloud Firestore</li>
+            <li>Retrofit</li>
+            <li>MVVM Architecture</li>
+            <li>Android XML</li>
+          </ul>
+
+          <h2>Project Information</h2>
+          <p><strong>Category:</strong> Android Application</p>
+          <p><strong>Platform:</strong> Android</p>
+          <p><strong>Language:</strong> Kotlin</p>
+          <p><strong>Backend:</strong> Firebase</p>
+          <p><strong>Architecture:</strong> MVVM</p>
+        </div>
+
+      </div>
+
+      <div class="card" style="margin-top: 2rem;">
+        <h2>How It Works</h2>
+        <ol>
+          <li>Users register or log in to the application.</li>
+          <li>Users explore content through the home screen and categories.</li>
+          <li>Published content is retrieved from Firebase Firestore.</li>
+          <li>Users can create and publish their own content.</li>
+          <li>Content and user information are managed through backend services.</li>
+        </ol>
+      </div>
+
+      <div class="card" style="margin-top: 2rem;">
+        <h2>Project Screenshots</h2>
+        <p>Explore the different screens of the TaleMint Android application.</p>
+
+        <div class="project-gallery">
+
+          <figure>
+            <img src="../assets/talemint/img1.jpg" alt="TaleMint screenshot 1" loading="lazy">
+            <figcaption>Application Screen 1</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/talemint/img2.jpg" alt="TaleMint screenshot 2" loading="lazy">
+            <figcaption>Application Screen 2</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/talemint/img3.jpg" alt="TaleMint screenshot 3" loading="lazy">
+            <figcaption>Application Screen 3</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/talemint/img4.jpg" alt="TaleMint screenshot 4" loading="lazy">
+            <figcaption>Application Screen 4</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/talemint/img5.jpg" alt="TaleMint screenshot 5" loading="lazy">
+            <figcaption>Application Screen 5</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/talemint/img6.jpg" alt="TaleMint screenshot 6" loading="lazy">
+            <figcaption>Application Screen 6</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/talemint/img7.jpg" alt="TaleMint screenshot 7" loading="lazy">
+            <figcaption>Application Screen 7</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/talemint/img8.jpg" alt="TaleMint screenshot 8" loading="lazy">
+            <figcaption>Application Screen 8</figcaption>
+          </figure>
+
+        </div>
+
+        <div class="project-video">
+          <h2>Application Demo</h2>
+          <p>Watch the TaleMint application in action.</p>
+
+          <video controls preload="metadata">
+            <source src="../assets/talemint/screen_recording.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 2rem;">
+        <h2>What I Learned</h2>
+        <p>
+          Through this project, I gained practical experience in
+          Android application development using Kotlin, integrating
+          Firebase services, managing data with Cloud Firestore,
+          working with Retrofit and organizing application
+          components using MVVM architecture.
+        </p>
+      </div>
+
+      <div class="actions" style="margin-top: 2rem;">
+
+        <a
+          href="https://github.com/keshavbind/TaleMint"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn primary"
+        >
+          <i data-lucide="github"></i>
+          View Source Code
+        </a>
+
+        <a href="../index.html#projects" class="btn ghost">
+          <i data-lucide="arrow-left"></i>
+          Back to Portfolio
+        </a>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Screenshot Lightbox -->
+  <div
+    class="image-lightbox"
+    id="imageLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Enlarged project screenshot"
+  >
+    <button
+      class="close-lightbox"
+      id="closeLightbox"
+      aria-label="Close enlarged image"
+    >
+      &times;
+    </button>
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt="Enlarged TaleMint screenshot"
+    >
+  </div>
+
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+
+    const galleryImages = document.querySelectorAll(".project-gallery img");
+    const lightbox = document.getElementById("imageLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeLightbox = document.getElementById("closeLightbox");
+
+    function openLightbox(image) {
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden";
+
+      closeLightbox.focus();
+    }
+
+    function hideLightbox() {
+      lightbox.classList.remove("active");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    galleryImages.forEach((image) => {
+      image.addEventListener("click", () => {
+        openLightbox(image);
+      });
+    });
+
+    closeLightbox.addEventListener("click", hideLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        hideLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        lightbox.classList.contains("active")
+      ) {
+        hideLightbox();
+      }
+    });
+  </script>
+</body>
+</html>

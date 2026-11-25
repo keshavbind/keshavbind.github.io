@@ -1,0 +1,23 @@
+/* Mobile-first: style.css is the phone layout; these rules enlarge it. */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .menu-btn { display: none; }
+  .menu { display: flex; position: static; flex-direction: row; gap: 1.5rem; padding: 0; background: none; border: 0; }
+  .menu a { padding: 0; font-size: .95rem; }
+  .skills, .projects { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr 1.1fr; gap: 3rem; }
+  .section { padding: 5.5rem 0; }
+  .hero { padding: 6rem 0 5rem; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero-grid { grid-template-columns: 1.3fr 1fr; gap: 4rem; }
+  .projects { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .btn { width: 100%; justify-content: center; }
+}
